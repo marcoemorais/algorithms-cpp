@@ -7,6 +7,8 @@ Some of my favorite algorithms implemented in modern c++.
     * Templated partition subroutine used by many algorithms such as quicksort.
 * [quicksort.cc](02-quicksort/quicksort.cc)
     * Simple implementation of quicksort.
-* [rselect](03-rselect/rselect.cc)
+* [rselect.cc](03-rselect/rselect.cc)
     * Finding k-th rank order statistic from random sequence in O(n).
+* [toposort.cc](04-toposort/toposort.cc)
+    * Topological sort implemeted using recursive depth first search.
 
