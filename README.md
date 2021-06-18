@@ -11,4 +11,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Finding k-th rank order statistic from random sequence in O(n).
 * [toposort.cc](04-toposort/toposort.cc)
     * Topological sort implemeted using recursive depth first search.
+* [dijkstra_shortest_path.cc](05-dijkstra-shortest-path/dijkstra_shortest_path.cc)
+    * Dijkstra's shortest path algorithm for non-negative weight graphs.
 
