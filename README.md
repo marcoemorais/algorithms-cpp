@@ -13,4 +13,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Topological sort implemeted using recursive depth first search.
 * [dijkstra_shortest_path.cc](05-dijkstra-shortest-path/dijkstra_shortest_path.cc)
     * Dijkstra's shortest path algorithm for non-negative weight graphs.
+* [bsearch.cc](06-bsearch/bsearch.cc)
+    * Binary search. Simple and effective. The pizza of algorithms.
 
