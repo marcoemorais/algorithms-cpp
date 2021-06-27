@@ -15,4 +15,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Dijkstra's shortest path algorithm for non-negative weight graphs.
 * [bsearch.cc](06-bsearch/bsearch.cc)
     * Binary search. Simple and effective. The pizza of algorithms.
+* [perms.cc](07-perms/perms.cc)
+    * Return all permutations of the input.
 
