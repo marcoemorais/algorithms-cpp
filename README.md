@@ -16,5 +16,7 @@ Some of my favorite algorithms implemented in modern c++.
 * [bsearch.cc](06-bsearch/bsearch.cc)
     * Binary search. Simple and effective. The pizza of algorithms.
 * [perms.cc](07-perms/perms.cc)
-    * Return all permutations of the input.
+    * Return the permutations aka all possible orderings of the input.
+* [powerset.cc](08-powerset/powerset.cc)
+    * Return the powerset aka all possible subsets of the input.
 
