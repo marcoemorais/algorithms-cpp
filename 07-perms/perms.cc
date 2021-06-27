@@ -36,8 +36,7 @@ perms(const std::vector<T>& elems, std::vector<std::vector<T>>& all_perms,
     }
 }
 
-
-// perms returns the set of all permutations of the input.
+// perms returns all possible orderings of the input.
 template <typename T>
 std::vector<std::vector<T>>
 perms(const std::vector<T>& elems)
