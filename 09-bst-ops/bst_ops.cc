@@ -71,7 +71,7 @@ make_bst(const std::vector<T>& values)
 // make_vector_inorder returns vector initialized from inorder traversal.
 template <typename T>
 std::vector<T>
-make_vector(const BSTNode<T>* root)
+make_vector_inorder(const BSTNode<T>* root)
 {
     std::vector<T> values;
 
@@ -81,7 +81,7 @@ make_vector(const BSTNode<T>* root)
         if (node->left) {
             visit_inorder(node->left.get());
         }
-        values.push_back(node.data);
+        values.push_back(node->data);
         if (node->right) {
             visit_inorder(node->right.get());
         }
@@ -181,6 +181,38 @@ after(const BSTNode<T>* root, const T& v, const BSTNode<T>* prev=nullptr)
     return root->right ? after(root->right.get(), v, prev) : prev;
 }
 
+}
+
+TEST_CASE("[make_bst]")
+{
+    using namespace algorithms;
+
+    struct test_case
+    {
+        std::string name;
+        std::vector<int> values;
+        std::vector<int> expected;
+    };
+
+    std::vector<test_case> test_cases{
+        {
+            "Balanced BST.",
+            {7, 3, 1, 5, 11, 9, 13},
+            {1, 3, 5, 7, 9, 11, 13},
+        },
+        {
+            "Unbalanced BST.",
+            {1, 7, 5, 9, 3},
+            {1, 3, 5, 7, 9},
+        },
+    };
+
+    for (const auto& c : test_cases) {
+        INFO(c.name);
+        auto root = make_bst(c.values);
+        auto rcv = make_vector_inorder(root.get());
+        REQUIRE(rcv == c.expected);
+    }
 }
 
 TEST_CASE("[search]")
