@@ -21,4 +21,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Return the powerset aka all possible subsets of the input.
 * [bst_ops.cc](09-bst-ops/bst_ops.cc)
     * Common operations on binary search tree: search, min, max, before, after.
+* [tree_ops.cc](10-tree-ops/tree_ops.cc)
+    * Common operations on binary tree: height, size, lca.
 
