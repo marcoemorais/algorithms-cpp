@@ -9,6 +9,9 @@
 #   include "algorithms/print.h"
 #endif
 
+namespace algorithms
+{
+
 template <typename T>
 void
 perms(const std::vector<T>& elems, std::vector<std::vector<T>>& all_perms,
@@ -49,8 +52,12 @@ perms(const std::vector<T>& elems)
     return all_perms;
 }
 
+}
+
 TEST_CASE("[perms]")
 {
+    using namespace algorithms;
+
     struct test_case
     {
         std::string name;

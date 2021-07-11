@@ -9,6 +9,9 @@
 #   include "algorithms/print.h"
 #endif
 
+namespace algorithms
+{
+
 template <typename T>
 void
 powerset(const std::vector<T>& elems, std::vector<std::vector<T>>& all_sets,
@@ -42,8 +45,12 @@ powerset(const std::vector<T>& elems)
     return all_sets;
 }
 
+}
+
 TEST_CASE("[powerset]")
 {
+    using namespace algorithms;
+
     struct test_case
     {
         std::string name;
