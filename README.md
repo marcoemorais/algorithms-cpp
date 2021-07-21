@@ -23,4 +23,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Common operations on binary search tree: search, min, max, before, after.
 * [tree_ops.cc](10-tree-ops/tree_ops.cc)
     * Common operations on binary tree: height, size, lca.
+* [prefix_sum.cc](11-prefix-sum/prefix_sum.cc)
+    * 1d and 2d prefix sum.
 
