@@ -25,4 +25,6 @@ Some of my favorite algorithms implemented in modern c++.
     * Common operations on binary tree: height, size, lca.
 * [prefix_sum.cc](11-prefix-sum/prefix_sum.cc)
     * 1d and 2d prefix sum.
+* [monte_carlo_pi.cc](12-monte-carlo-pi/monte_carlo_pi.cc)
+    * Monte Carlo method for approximating pi.
 
