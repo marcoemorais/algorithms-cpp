@@ -50,14 +50,14 @@ prefix_sum_2d(const Matrix2d<T>& m)
 
     // Compute the prefix sum along the columns.
     for (std::size_t i = 0; i < nrow; ++i) {
-        for (std::size_t j = 1; j < ncol; ++j) {
+        for (std::size_t j = 1; j < ncol; ++j) { // 1...ncol
             prefix_sum[i][j] += prefix_sum[i][j-1];
         }
     }
 
     // Compute the prefix sum along the rows.
-    for (std::size_t j = 0; j < ncol; ++j) {
-        for (std::size_t i = 1; i < nrow; ++i) {
+    for (std::size_t i = 1; i < nrow; ++i) { // 1..nrow
+        for (std::size_t j = 0; j < ncol; ++j) {
             prefix_sum[i][j] += prefix_sum[i-1][j];
         }
     }
