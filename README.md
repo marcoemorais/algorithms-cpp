@@ -27,4 +27,6 @@ Some of my favorite algorithms implemented in modern c++.
     * 1d and 2d prefix sum.
 * [monte_carlo_pi.cc](12-monte-carlo-pi/monte_carlo_pi.cc)
     * Monte Carlo method for approximating pi.
+* [coin_change.cc](13-coin-change/coin_change.cc)
+    * Find the minimum number of coins to sum to S.
 
