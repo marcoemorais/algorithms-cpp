@@ -29,4 +29,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Monte Carlo method for approximating pi.
 * [coin_change.cc](13-coin-change/coin_change.cc)
     * Find the minimum number of coins to sum to S.
-
+* [bisection.cc](14-bisection/bisection.cc)
+    * Use bisection to find the cube root of a function.
