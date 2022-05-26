@@ -31,3 +31,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Find the minimum number of coins to sum to S.
 * [bisection.cc](14-bisection/bisection.cc)
     * Use bisection to find the cube root of a function.
+* [horners_rule.cc](15-horners-rule/horners_rule.cc)
+    * Use Horner's Rule to evaluate a polynomial.
