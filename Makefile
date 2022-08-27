@@ -4,7 +4,22 @@ IMAGE=$(NAME)
 TAG=local
 ACTION?=test
 
-DIRS :=
+DIRS := \
+	01-partition \
+	02-quicksort \
+	03-rselect \
+	04-toposort \
+	05-dijkstra-shortest-path \
+	06-bsearch \
+	07-perms \
+	08-powerset \
+	09-bst-ops \
+	10-tree-ops \
+	11-prefix-sum \
+	12-monte-carlo-pi \
+	13-coin-change \
+	14-bisection \
+	15-horners-rule
 
 .PHONY: $(DIRS) all-clean
 
