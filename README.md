@@ -37,3 +37,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Remove elements matching v in [first, last) and return one past new end of range.
 * [unique.cc](17-unique/unique.cc)
     * Unique removes adjacent duplicates from sorted sequence in [first, last).
+* [rotate.cc](18-rotate/rotate.cc)
+    * Rotate elements from [first, last) so that middle appears first.
