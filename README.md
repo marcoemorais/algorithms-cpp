@@ -33,3 +33,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Use bisection to find the cube root of a function.
 * [horners_rule.cc](15-horners-rule/horners_rule.cc)
     * Use Horner's Rule to evaluate a polynomial.
+* [remove.cc](16-remove/remove.cc)
+    * Remove elements matching v in [first, last) and return one past new end of range.
