@@ -29,7 +29,7 @@ rselect(RandomIt first, RandomIt last, int k, Less less=std::less<T>())
     }
 
     // Pick a random element from sequence as pivot p.
-    thread_local std::default_random_engine gen{};
+    thread_local std::default_random_engine gen{std::random_device{}()};
     std::uniform_int_distribution<> dis(0, nelem-1);
     auto pivot_ind = dis(gen); // Distance from first as number.
     auto pivot = first + pivot_ind;
@@ -123,6 +123,36 @@ TEST_CASE("[rselect]")
             auto input_cp = c.input;
             auto rcv = rselect(begin(input_cp), end(input_cp), expect.first);
             REQUIRE(*rcv == expect.second);
+        }
+    }
+}
+
+TEST_CASE("[rselect::random]")
+{
+    using namespace algorithms;
+
+    std::default_random_engine gen{std::random_device{}()};
+    int minv = 0, maxv = 127;
+    std::uniform_int_distribution<int> dis(minv, maxv);
+    auto fill_func = [&dis, &gen](){ return dis(gen); };
+
+    for (auto size : {4, 8, 16, 32, 64}) {
+        INFO(size);
+        std::vector<int> input(size, 0);
+        std::generate(std::begin(input), std::end(input), fill_func);
+        std::uniform_int_distribution<int> randk(1, size);
+
+        int nrepeat = 100;
+        while (nrepeat > 0) {
+            INFO(nrepeat);
+            std::shuffle(std::begin(input), std::end(input), gen);
+            auto input_cp = input;
+            int k = randk(gen);
+            auto it = rselect(begin(input_cp), end(input_cp), k);
+            int rcv = *it;
+            std::sort(begin(input_cp), end(input_cp));
+            REQUIRE(rcv == input_cp[k-1]);
+            --nrepeat;
         }
     }
 }
