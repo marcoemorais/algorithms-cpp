@@ -129,7 +129,7 @@ TEST_CASE("[quicksort::random]")
 {
     using namespace algorithms;
 
-    std::default_random_engine gen{};
+    std::default_random_engine gen{std::random_device{}()};
     int minv = 0, maxv = 127;
     std::uniform_int_distribution<int> dis(minv, maxv);
     auto fill_func = [&dis, &gen](){ return dis(gen); };
