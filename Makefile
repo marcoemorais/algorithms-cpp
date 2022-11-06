@@ -19,7 +19,10 @@ DIRS := \
 	12-monte-carlo-pi \
 	13-coin-change \
 	14-bisection \
-	15-horners-rule
+	15-horners-rule \
+	16-remove \
+	17-unique \
+	18-rotate
 
 .PHONY: $(DIRS) all-clean
 
