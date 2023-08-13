@@ -39,3 +39,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Unique removes adjacent duplicates from sorted sequence in [first, last).
 * [rotate.cc](18-rotate/rotate.cc)
     * Rotate elements from [first, last) so that middle appears first.
+* [combos.cc](19-combos/combos.cc)
+    * Return all combinations of n objects choosing k e.g. C(n,k).

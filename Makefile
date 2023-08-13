@@ -22,7 +22,8 @@ DIRS := \
 	15-horners-rule \
 	16-remove \
 	17-unique \
-	18-rotate
+	18-rotate \
+	19-combos
 
 .PHONY: $(DIRS) all-clean
 
