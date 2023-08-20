@@ -23,7 +23,8 @@ DIRS := \
 	16-remove \
 	17-unique \
 	18-rotate \
-	19-combos
+	19-combos \
+	20-nqueens
 
 .PHONY: $(DIRS) all-clean
 

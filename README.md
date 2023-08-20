@@ -41,3 +41,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Rotate elements from [first, last) so that middle appears first.
 * [combos.cc](19-combos/combos.cc)
     * Return all combinations of n objects choosing k e.g. C(n,k).
+* [nqueens.cc](20-nqueens/nqueens.cc)
+    * Return all unique arrangements of queens on n X n board.
