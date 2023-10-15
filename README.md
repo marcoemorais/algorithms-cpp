@@ -43,3 +43,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Return all combinations of n objects choosing k e.g. C(n,k).
 * [nqueens.cc](20-nqueens/nqueens.cc)
     * Return all unique arrangements of queens on n X n board.
+* [fastpow.cc](21-fastpow/fastpow.cc)
+    * Use divide-and-conquer to compute x^y.
