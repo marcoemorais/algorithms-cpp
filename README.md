@@ -45,3 +45,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Return all unique arrangements of queens on n X n board.
 * [fastpow.cc](21-fastpow/fastpow.cc)
     * Use divide-and-conquer to compute x^y.
+* [rolling_hash.cc](22-rolling-hash/rolling_hash.cc)
+    * Return the hash of a rolling window in O(1).

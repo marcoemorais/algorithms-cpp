@@ -24,7 +24,9 @@ DIRS := \
 	17-unique \
 	18-rotate \
 	19-combos \
-	20-nqueens
+	20-nqueens \
+	21-fastpow \
+	22-rolling-hash
 
 .PHONY: $(DIRS) all-clean
 
