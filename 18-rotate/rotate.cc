@@ -16,7 +16,7 @@ namespace algorithms
 // rotate elements from [first, last) so that middle appears first.
 template <typename FwdIter>
 void
-rotate(FwdIter first, FwdIter middle, FwdIter last)
+rotate_cyclic(FwdIter first, FwdIter middle, FwdIter last)
 {
     if (first == middle || middle == last) {
         return;
@@ -35,15 +35,24 @@ rotate(FwdIter first, FwdIter middle, FwdIter last)
         ++write;
     }
 
-    algorithms::rotate(write, next_middle, last); // rotate subsequence.
+    rotate_cyclic(write, next_middle, last); // rotate subsequence.
 }
 
-}
-
-TEST_CASE("[unique]")
+// rotate elements from [first, last) so that middle appears first.
+template <typename FwdIter>
+void
+rotate_reversals(FwdIter first, FwdIter middle, FwdIter last)
 {
-    namespace alg = algorithms;
+    auto pivot = std::distance(first, last) - std::distance(first, middle);
+    std::reverse(first, last);
+    std::reverse(first, first + pivot);
+    std::reverse(first + pivot, last);
+}
 
+}
+
+TEST_SUITE("[rotate]")
+{
     struct test_case
     {
         std::string name;
@@ -105,12 +114,27 @@ TEST_CASE("[unique]")
         },
     };
 
-    for (const auto& c : test_cases) {
-        INFO(c.name);
-        auto input_cp = c.input;
-        alg::rotate(std::begin(input_cp) + c.first,
-                    std::begin(input_cp) + c.middle,
-                    std::begin(input_cp) + c.last);
-        REQUIRE(input_cp == c.expected);
+    TEST_CASE("[rotate_cyclic]")
+    {
+        for (const auto& c : test_cases) {
+            INFO(c.name);
+            auto input_cp = c.input;
+            algorithms::rotate_cyclic(std::begin(input_cp) + c.first,
+                                      std::begin(input_cp) + c.middle,
+                                      std::begin(input_cp) + c.last);
+            REQUIRE(input_cp == c.expected);
+        }
+    }
+
+    TEST_CASE("[rotate_reversals]")
+    {
+        for (const auto& c : test_cases) {
+            INFO(c.name);
+            auto input_cp = c.input;
+            algorithms::rotate_reversals(std::begin(input_cp) + c.first,
+                                         std::begin(input_cp) + c.middle,
+                                         std::begin(input_cp) + c.last);
+            REQUIRE(input_cp == c.expected);
+        }
     }
 }
