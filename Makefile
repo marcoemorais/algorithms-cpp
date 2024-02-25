@@ -26,7 +26,8 @@ DIRS := \
 	19-combos \
 	20-nqueens \
 	21-fastpow \
-	22-rolling-hash
+	22-rolling-hash \
+	23-majority
 
 .PHONY: $(DIRS) all-clean
 

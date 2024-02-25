@@ -47,3 +47,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Use divide-and-conquer to compute x^y.
 * [rolling_hash.cc](22-rolling-hash/rolling_hash.cc)
     * Return the hash of a rolling window in O(1).
+* [majority.cc](23-majority/majority.cc)
+    * Boyer-Moore majority vote for finding the majority value, if one exists, in a sequence.
