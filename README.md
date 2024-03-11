@@ -49,3 +49,5 @@ Some of my favorite algorithms implemented in modern c++.
     * Return the hash of a rolling window in O(1).
 * [majority.cc](23-majority/majority.cc)
     * Boyer-Moore majority vote for finding the majority value, if one exists, in a sequence.
+* [binomial.cc](24-binomial/binomial.cc)
+    * Use dynamic programming to compute the binomial coefficients.
